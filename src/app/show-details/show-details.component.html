@@ -1,13 +1,13 @@
 <h1>Show #{{show.id}}</h1>
-<table mat-table [dataSource]="episodes" class="mat-elevation-z8">
+<table mat-table [dataSource]="episodes" class="mat-elevation-z8" width="100%">
 
   <ng-container matColumnDef="season">
-    <th mat-header-cell *matHeaderCellDef>Season</th>
+    <th mat-header-cell *matHeaderCellDef>Se</th>
     <td mat-cell *matCellDef="let episode">{{episode.seasonNumber}}</td>
   </ng-container>
 
   <ng-container matColumnDef="episode">
-    <th mat-header-cell *matHeaderCellDef>Episode</th>
+    <th mat-header-cell *matHeaderCellDef>Ep</th>
     <td mat-cell *matCellDef="let episode">{{episode.episodeNumber}}</td>
   </ng-container>
 
