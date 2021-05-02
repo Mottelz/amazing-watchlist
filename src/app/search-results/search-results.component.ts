@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Show} from '../models/show.model';
-import {DummyService} from '../services/dummy.service';
 import {TvmazeService} from '../services/tvmaze.service';
 import {ActivatedRoute} from '@angular/router';
 
@@ -12,7 +11,7 @@ import {ActivatedRoute} from '@angular/router';
 export class SearchResultsComponent implements OnInit {
   shows: Array<Show>;
   query: string;
-  constructor(private dummyService: DummyService, private route: ActivatedRoute, private tvService: TvmazeService) {
+  constructor(private route: ActivatedRoute, private tvService: TvmazeService) {
     this.query = this.route.snapshot.params.query;
   }
 
@@ -23,6 +22,5 @@ export class SearchResultsComponent implements OnInit {
         (shows) => { this.shows = shows; }
       );
     });
-    // this.dummyService.getShows().subscribe((s) => { this.shows = s; });
   }
 }
