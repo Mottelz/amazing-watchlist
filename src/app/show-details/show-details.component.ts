@@ -38,6 +38,5 @@ export class ShowDetailsComponent implements OnInit {
 
   addShow(): void {
     this.pouch.addShow(this.show);
-    this.router.navigateByUrl('');
   }
 }

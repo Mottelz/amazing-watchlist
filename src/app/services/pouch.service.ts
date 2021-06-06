@@ -35,7 +35,6 @@ export class PouchService {
     this.db.get('watchlist')
       .then((doc) => {
         doc.shows = doc.shows.filter(show => show.id !== newShow.id);
-        console.log(doc.shows);
         this.db.put(doc);
         this.reloadCurrentRoute();
         })
